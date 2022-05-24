@@ -1,27 +1,35 @@
 {
-  "plumbers": [],
-  "completions": [],
-  "requests": [
+  "plumbers": [
     {
       "id": 1,
-      "description": "My sink is spewing everywhere! Please send help!.",
-      "address": "34445 Bianka Ports",
-      "budget": 400,
-      "neededBy": "2021-08-27"
+      "name": "Maude"
     },
     {
       "id": 2,
-      "description": "When I turn the water on it's brown not clear. Need help making it clear again, is that something y'all do?",
-      "address": "7463 Dabble Street",
-      "budget": 100,
-      "neededBy": "2021-08-27"
+      "name": "Merle"
+    }
+  ],
+  "completions": [
+    {
+      "requestId": 1,
+      "plumberId": 1,
+      "date_created": 1653425403928,
+      "id": 1
     },
     {
-      "id": 3,
-      "description": "My hot water is out and I smell real bad. Please save me from a cold shower!",
-      "address": "3672 Apple Bottom Lane",
-      "budget": 1000,
-      "neededBy": "2021-08-27"
+      "requestId": 1,
+      "plumberId": 1,
+      "date_created": 1653425458087,
+      "id": 2
+    }
+  ],
+  "requests": [
+    {
+      "description": "Sink is spewing everywhere! Please send help!",
+      "address": "800 Hopeful Lane",
+      "budget": "500",
+      "neededBy": "2022-05-24",
+      "id": 1
     }
   ]
 }

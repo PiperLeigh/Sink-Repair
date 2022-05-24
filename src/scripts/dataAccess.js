@@ -3,7 +3,7 @@
 //Initial value must be empty array
 const applicationState = {
     requests: [],
-    plumbers: []
+    completions: []
 }
 
 //Assign main container to variable (same as main.js)
@@ -24,7 +24,7 @@ export const fetchRequests = () => {
         )
 }
 
-//Getter function to return transient state copy of requests from applicationState
+//Getter function to return transient copy of requests from applicationState
 export const getRequests = () => {
     return applicationState.requests.map(request => ({ ...request }))
 }
@@ -38,6 +38,7 @@ export const sendRequest = (userServiceRequest) => {
         },
         body: JSON.stringify(userServiceRequest)
     }
+
 
     return fetch(`${API}/requests`, fetchOptions)
         .then(response => response.json())
@@ -92,8 +93,12 @@ export const fetchCompletions = () => {
     return fetch(`${API}/completions`)
         .then(resource => resource.json())
         .then(
-            (completions) => {
-                applicationState.completions = completions
+            (completion) => {
+                applicationState.completions = completion
             }
         )
+}
+
+export const getCompletions = () => {
+    return applicationState.completions.map(completion => ({ ...completion }))
 }

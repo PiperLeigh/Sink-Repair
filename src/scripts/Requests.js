@@ -6,7 +6,7 @@ import { getPlumbers, getRequests, saveCompletions } from "./dataAccess.js"
 export const Requests = () => {
     const requests = getRequests()  //Assign getter function for requests to variable
     const plumbers = getPlumbers()  //Assign getter function for plumbers to variable
-
+    
     //Construct interpolated HTML
     let html = `
         <ul>
@@ -70,4 +70,4 @@ mainContainer.addEventListener(
             saveCompletions(completion)
         }
     }
-)
+);
